@@ -9,9 +9,11 @@ ActiveAdmin.register Schedule do
     column :status
     column :time
     column :address
-    column :phone_number
-    column :member
+    column "Phone Number" do |phone|
+      number_to_phone(phone.phone_number, pattern: /(\d{0,2})(\d{3,4})(\d{4})$/, area_code: true, country_code: 82)
+    end
     column :install_type
+    column :member
     column :created_at
     actions
   end
