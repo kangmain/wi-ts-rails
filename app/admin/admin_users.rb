@@ -5,7 +5,7 @@ ActiveAdmin.register AdminUser do
     selectable_column
     id_column
     column :name
-    column :install_time
+    column :phone_number
     column :created_at
     actions
   end
@@ -13,7 +13,7 @@ ActiveAdmin.register AdminUser do
   show do
     attributes_table do
     row :name
-    row :install_time
+    row :phone_number
     row :created_at
     end
     active_admin_comments
@@ -23,9 +23,11 @@ ActiveAdmin.register AdminUser do
 
   filter :name
 
+
   form do |f|
     f.inputs do
       f.input :name
+      f.input :phone_number
     end
     f.actions
   end
