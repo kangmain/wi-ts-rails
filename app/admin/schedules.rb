@@ -17,7 +17,6 @@ ActiveAdmin.register Schedule do
     end
     column :install_type
     column :member
-    column :created_at
     actions
   end
 
@@ -34,7 +33,6 @@ ActiveAdmin.register Schedule do
     row :phone_number
     row :member
     row :install_type
-    row :created_at
     end
     active_admin_comments
   end
