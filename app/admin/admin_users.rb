@@ -4,7 +4,7 @@ ActiveAdmin.register AdminUser do
   index do
     selectable_column
     id_column
-    column :name
+    column (:name) { |node| link_to node.name, admin_admin_user_path(node) }
     column :phone_number
     column :created_at
     actions

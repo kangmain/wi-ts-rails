@@ -4,7 +4,7 @@ ActiveAdmin.register Schedule do
   index do
     selectable_column
     id_column
-    column :name
+    column (:name) { |node| link_to node.name, admin_schedule_path(node) }
     column :category
     column :date
     column :status
